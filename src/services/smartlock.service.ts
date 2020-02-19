@@ -4,7 +4,7 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 export interface Credential {
   id: string;
   name: string;
-  passowrd: string;
+  password: string;
 }
 
 /**
