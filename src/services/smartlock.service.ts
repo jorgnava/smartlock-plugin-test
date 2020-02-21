@@ -41,7 +41,7 @@ export class Smartlock extends IonicNativePlugin {
    * @return {Promise<any>} Returns a promise with result
    */
   @Cordova()
-  delete(): Promise<any> {
+  delete(credential: Credential): Promise<any> {
     return;
   }
 }

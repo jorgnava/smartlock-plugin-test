@@ -25,15 +25,26 @@ export class HomePage {
       name: this.name,
       password: this.password
     })
+    .then(() => console.log('Smartlock save success'))
+    .catch(err => console.log('Smartlock save error', err));
   }
 
   onRequest() {
-    this.splash.hide();
     this.smartlock.request()
     .then(({ id, name, password }) => {
       this.result = 'id: ' + id + 'name: ' + name + 'password: ' + password;
     })
     .catch(err => console.log('Smartlock request error', err));
+  }
+
+  onDelete() {
+    this.smartlock.delete({
+      id: this.name,
+      name: this.name,
+      password: this.password
+    })
+    .then(() => console.log('Smartlock delete success'))
+    .catch(err => console.log('Smartlock delete error', err));
   }
 
 }
