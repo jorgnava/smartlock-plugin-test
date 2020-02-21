@@ -11,12 +11,16 @@ export class HomePage {
 
   name: string;
   password: string;
-  result: string;
+
+  result = {
+    id: '',
+    name: '',
+    password: ''
+  }
 
   constructor(
     public navCtrl: NavController,
-    private smartlock: Smartlock,
-    private splash: SplashScreen
+    private smartlock: Smartlock
     ) {}
 
   onSave() {
@@ -32,7 +36,11 @@ export class HomePage {
   onRequest() {
     this.smartlock.request()
     .then(({ id, name, password }) => {
-      this.result = 'id: ' + id + 'name: ' + name + 'password: ' + password;
+      this.result = {
+        id: 'id: ' + id,
+        name: 'name: ' + name,
+        password: 'password: ' + password
+      }
     })
     .catch(err => console.log('Smartlock request error', err));
   }

@@ -8,7 +8,12 @@
   <ion-input [(ngModel)]="name" placeholder="Name"></ion-input>
   <ion-input [(ngModel)]="password" placeholder="Password"></ion-input>
   <button ion-button (click)="onSave()" color="primary">SAVE</button>
+  <button ion-button (click)="onDelete()" color="primary">DELETE</button>
+  
   <br><br><br><br><br><br>
+
   <button ion-button (click)="onRequest()" color="primary">REQUEST</button>
-  <ion-input [(ngModel)]="result" placeholder="Result"></ion-input>
+  <ion-input [(ngModel)]="result.id" placeholder="ResultId"></ion-input>
+  <ion-input [(ngModel)]="result.name" placeholder="ResultName"></ion-input>
+  <ion-input [(ngModel)]="result.password" placeholder="ResultPassword"></ion-input>
 </ion-content>
