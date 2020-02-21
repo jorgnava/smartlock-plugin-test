@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Smartlock } from '../../services/smartlock.service';
-import { SplashScreen } from '@ionic-native/splash-screen';
 
 @Component({
   selector: 'page-home',
@@ -41,16 +40,13 @@ export class HomePage {
         name: 'name: ' + name,
         password: 'password: ' + password
       }
+      console.log('Smartlock request success')
     })
     .catch(err => console.log('Smartlock request error', err));
   }
 
   onDelete() {
-    this.smartlock.delete({
-      id: this.name,
-      name: this.name,
-      password: this.password
-    })
+    this.smartlock.delete({ id: this.name })
     .then(() => console.log('Smartlock delete success'))
     .catch(err => console.log('Smartlock delete error', err));
   }
