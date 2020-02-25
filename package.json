@@ -31,7 +31,8 @@
   },
   "devDependencies": {
     "cordova-android": "^8.1.0",
-    "cordova-plugin-smart-lock": "github:okode/cordova-plugin-smart-lock#1.0.0",
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-smart-lock": "github:okode/cordova-plugin-smart-lock#ios",
     "@ionic/app-scripts": "3.2.4",
     "typescript": "2.6.2",
     "cordova-plugin-whitelist": "1.3.3",
@@ -43,7 +44,9 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-smart-lock": {},
+      "cordova-plugin-smart-lock": {
+        "SMARTLOCK_IOS_TEAM_ID": "H5CZVR3H7B"
+      },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
