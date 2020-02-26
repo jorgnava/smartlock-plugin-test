@@ -44,9 +44,7 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-smart-lock": {
-        "SMARTLOCK_IOS_TEAM_ID": "H5CZVR3H7B"
-      },
+      "cordova-plugin-smart-lock": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
