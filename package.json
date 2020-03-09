@@ -44,7 +44,9 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-smart-lock": {},
+      "cordova-plugin-smart-lock": {
+        "ASSET_STATEMENT": "https://d350xjyrztxie4.cloudfront.net/.well-known/assetlinks.json"
+      },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
